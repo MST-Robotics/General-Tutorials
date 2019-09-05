@@ -18,30 +18,39 @@ It doesn't have to compile
 
 using namespace std;
 
-int main()
+// Bring values outside of +-500 to +-500
+void reduce(int* x)
 {
-	int x
-	cout << "this is the basic example" << endl;
-	cout << "give x as long as it is less than 5: ";
-	cin >> x;
-	while (x > 5)//trapping you in an infinite loop
+	if (abs(*x) > 500)
 	{
-		cout << "dafdadadadfad" << endl;
+		*x = copysign(500, *x);
 	}
-	for (int i = x; i < 5; i++)//adding two to x
-	{
-		int x = x + 2;
-
-	}
-	cout << x << endl;
-	random_function(x);
-
-  return 0;
 }
 
 
-void function(int x)
+int main()
 {
-	cout << "random function call" << endl;
+	// count up in same line
+	for (int x = 0; x <= 10000; ++x)
+	{
+		cout << "\33[2K Current number: " << x << "\r";
+	}
+	cout << endl;
+
+	int x = 1000;
+	int y = -1000;
+
+	int* vals[] = { &x, &y };
+
+	for (int* num : vals)
+	{
+		reduce(num);
+	}
+
+	cout << "X: " << x << endl
+		<< "Y: " << y << endl;
+
+
+
 	return 0;
 }
