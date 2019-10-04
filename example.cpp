@@ -1,18 +1,4 @@
-/*
-general c++ file for members to copy from github through
-visual studio
-Create a branch with your first name as the branch name
-*/
-
-
-/*
-Create a short program that showcases your programming skill level
-Have it at least show the basics you know
-show the way you write, indent, comment, name variables, etc
-It doesn't have to compile
-*/
-
-//example
+// An example of a submission as detailed by the README
 #include <stdio.h>
 #include <iostream>
 
